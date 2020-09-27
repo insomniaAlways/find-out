@@ -3,6 +3,8 @@ import { Switch, Route } from "react-router-dom";
 import StockHome from "../screens/admin/stock";
 import Category from "../screens/admin/stock/category";
 import Item from "../screens/admin/stock/item";
+import AppContainer from "../components/app-container";
+import AdminDashboard from "../screens/admin";
 
 export const adminRouteConfig = [
   {
@@ -14,20 +16,26 @@ export const adminRouteConfig = [
     component: Category
   },
   {
-    path: "admin/stock/item",
+    path: "/admin/stock/item",
     component: Item
+  },
+  {
+    path: "/admin/dashboard",
+    component: AdminDashboard
   }
 ];
 
 const AdminRoutes = () => {
   return (
-    <Fragment>
-      {adminRouteConfig.map((route) => (
-        <Switch key={route.path}>
-          <Route path={route.path} component={route.component} />
-        </Switch>
-      ))}
-    </Fragment>
+    <AppContainer>
+      <Fragment>
+        {adminRouteConfig.map((route) => (
+          <Switch key={route.path}>
+            <Route path={route.path} component={route.component} />
+          </Switch>
+        ))}
+      </Fragment>
+    </AppContainer>
   );
 };
 

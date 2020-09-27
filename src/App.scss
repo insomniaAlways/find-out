@@ -1,1 +1,11 @@
 @import "~bootstrap/scss/bootstrap.scss";
+
+@import "./style/global.scss";
+
+@import "./style/custom.scss";
+
+@import "./style/variable.scss";
+
+.app-container {
+  height: 100vh;
+}
