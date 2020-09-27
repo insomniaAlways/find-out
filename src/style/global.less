@@ -24,15 +24,32 @@
   margin-top: calc(100vh - 59%);
 }
 
+.margin {
+  &-no {
+    margin: 0 !important;
+  }
+}
+
 .shadow-button {
   background-color: white;
   border: none;
   color: blue;
+  width: 278px !important;
+  border-radius: 5px;
+  padding-top: 30px !important;
+  padding-bottom: 30px !important;
+  font-size: 20px;
   -webkit-box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.36);
   -moz-box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.36);
   box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.36);
 }
 
-.heigth-full {
+.height-full {
   height: 100%;
+}
+
+.bottom-tab {
+  a::before {
+    content: none !important;
+  }
 }

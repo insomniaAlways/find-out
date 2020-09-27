@@ -1,14 +1,10 @@
 import React from "react";
-import { Button } from "react-bootstrap";
+import { Button } from "semantic-ui-react";
 
 function StockHome() {
   return (
-    <div className="d-flex justify-content-center heigth-full align-items-center">
-      <div>
-        <Button className="shadow-button" size="lg">
-          Add new Category
-        </Button>
-      </div>
+    <div className="ui two column centered center aligned grid margin-no height-full">
+      <div className="middle aligned column shadow-button">Add new Category</div>
     </div>
   );
 }
