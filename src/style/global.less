@@ -1,3 +1,840 @@
+@import "./variables.less";
+
+// Branding Classes
+
+.ui.inverted.segment {
+  background: @brand-secondary !important;
+}
+
+.ui.inverted.segment.lightblack {
+  background: @lightblack !important;
+}
+
+.button-mixin(@color, @font-color) {
+  background-color: @color !important;
+  color: @font-color;
+}
+
+.button-hover-mixin(@color, @font-color) {
+  background-color: darken(@color, 10%) !important;
+  box-shadow: 0px 0px 0px 1px transparent inset, 0px 0em 0px 0px darken(@color, 10%) inset;
+}
+
+.button-mixin-active(@color, @font-color) {
+  background-color: darken(@color, 20%) !important;
+  box-shadow: 0px 0px 0px 1px transparent inset, 0px 0em 0px 0px darken(@color, 20%) inset;
+}
+
+.basic-button-mixin(@color) {
+  box-shadow: 0px 0px 0px 1px @color inset !important;
+  background-color: transparent !important;
+  border-color: @color !important;
+  color: @color !important;
+}
+
+.basic-button-hover-mixin(@color) {
+  color: darken(@color, 10%) !important;
+  border-color: darken(@color, 10%) !important;
+  background-color: transparent !important;
+  box-shadow: 0px 0px 0px 1px darken(@color, 10%) inset, 0px 0px 0px 0px darken(@color, 10%) inset !important;
+}
+
+.basic-button-active-mixin(@color) {
+  background-color: darken(@color, 50%) !important;
+  color: lighten(@color, 80%) !important;
+  border-color: darken(@color, 20%) !important;
+  box-shadow: 0px 0px 0px 1px darken(@color, 20%) inset, 0px 0px 0px 0px darken(@color, 20%) inset !important;
+}
+
+.ui.brand.button {
+  .button-mixin(@brand, @white);
+  &:hover {
+    .button-hover-mixin(@brand, @white);
+  }
+  &:active {
+    .button-mixin-active(@brand, @white);
+  }
+}
+
+.ui.positive.button {
+  .button-mixin(@brand, @white);
+  &:hover {
+    .button-hover-mixin(@brand, @white);
+  }
+  &:active {
+    .button-mixin-active(@brand, @white);
+  }
+}
+
+.button.ui.positive.basic.button {
+  .basic-button-mixin(@brand);
+  &:hover {
+    .basic-button-hover-mixin(@brand);
+  }
+  &:active {
+    .basic-button-active-mixin(@brand);
+  }
+}
+
+.ui.negative.button {
+  .button-mixin(@brand-secondary, @white);
+  &:hover {
+    .button-hover-mixin(@brand-secondary, @white);
+  }
+  &:active {
+    .button-mixin-active(@brand-secondary, @white);
+  }
+}
+
+.ui.tv-secondary.brand.basic {
+  .basic-button-mixin(@brand-secondary);
+}
+
+.button.ui.negative.basic.button {
+  .basic-button-mixin(@brand-secondary);
+  &:hover {
+    .basic-button-hover-mixin(@brand-secondary);
+  }
+  &:active {
+    .basic-button-active-mixin(@brand-secondary);
+  }
+}
+
+.button {
+  &-size {
+    &-long {
+      width: 150px;
+    }
+    &-medium {
+      width: 120px;
+    }
+  }
+}
+
+.shadow-button {
+  background-color: white;
+  border: none;
+  color: @brand;
+  width: 278px !important;
+  border-radius: 5px;
+  padding-top: 30px !important;
+  padding-bottom: 30px !important;
+  font-size: 20px;
+  -webkit-box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.36);
+  -moz-box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.36);
+  box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.36);
+  &:active {
+    color: darken(@brand, 10%) !important;
+    border: none;
+    background-color: transparent !important;
+    box-shadow: 0px 1px 2px 1px rgba(0, 0, 0, 0.36) inset,
+      0px 0px 3px -3px rgba(0, 0, 0, 0.36) inset !important;
+  }
+}
+
+// Body Classes
+
+body {
+  font-size: 14px;
+  font-family: "Roboto", sans-serif !important;
+  // background-color: @body-background !important;
+}
+
+// Margin Classes
+
+.margin {
+  &-auto {
+    margin: auto !important;
+  }
+  &-no {
+    margin-left: none !important;
+    margin-right: none !important;
+    margin-bottom: none !important;
+    margin-top: none !important;
+    margin: 0 !important;
+  }
+  &-five {
+    margin: 5px;
+  }
+  &-ten {
+    margin: 10px;
+  }
+  &-top {
+    &-no {
+      margin-top: 0px;
+    }
+    &-five {
+      margin-top: 5px;
+    }
+    &-ten {
+      margin-top: 10px !important;
+    }
+    &-fifteen {
+      margin-top: 15px;
+    }
+    &-twenty {
+      margin-top: 20px;
+    }
+    &-twenty-five {
+      margin-top: 25px;
+    }
+    &-thirty {
+      margin-top: 30px;
+    }
+    &-sixty {
+      margin-top: 60px;
+    }
+    &-hundred {
+      margin-top: 100px;
+    }
+  }
+  &-left {
+    &-no {
+      margin-left: 0px;
+    }
+    &-five {
+      margin-left: 5px;
+    }
+    &-ten {
+      margin-left: 10px !important;
+    }
+    &-fifteen {
+      margin-left: 15px;
+    }
+    &-thirty {
+      margin-left: 30px !important;
+    }
+    &-forty {
+      margin-left: 40px;
+    }
+  }
+  &-bottom {
+    &-no {
+      margin-bottom: 0px !important;
+    }
+    &-five {
+      margin-bottom: 5px;
+    }
+    &-ten {
+      margin-bottom: 10px !important;
+    }
+    &-fifteen {
+      margin-bottom: 15px !important;
+    }
+    &-twenty {
+      margin-bottom: 20px !important;
+    }
+  }
+  &-right {
+    &-no {
+      margin-right: 0px;
+    }
+    &-five {
+      margin-right: 5px;
+    }
+    &-ten {
+      margin-right: 10px !important;
+    }
+    &-twenty {
+      margin-right: 20px !important;
+    }
+    &-thirty {
+      margin-right: 30px !important;
+    }
+  }
+  &-lg {
+    margin: 35px !important;
+    &-left {
+      margin-left: 35px !important;
+    }
+    &-right {
+      margin-right: 35px !important;
+    }
+    &-top {
+      margin-top: 35px;
+    }
+    &-bottom {
+      margin-bottom: 35px !important;
+    }
+  }
+  &-xl {
+    margin: 60px !important;
+    &-left {
+      margin-left: 70px !important;
+    }
+    &-right {
+      margin-right: 70px !important;
+    }
+    &-top {
+      margin-top: 70px;
+    }
+    &-bottom {
+      margin-bottom: 70px !important;
+    }
+  }
+}
+
+// Padding Classes
+
+.padding {
+  &-no {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+    &-top {
+      padding-top: 0px !important;
+    }
+    &-bottom {
+      padding-bottom: 0px !important;
+    }
+    &-left {
+      padding-left: 0px !important;
+    }
+    &-right {
+      padding-right: 0px !important;
+    }
+  }
+  &-bg {
+    padding: 30px !important;
+    &-left {
+      padding-left: 30px !important;
+    }
+    &-right {
+      padding-right: 30px !important;
+    }
+    &-top {
+      padding-top: 30px;
+    }
+    &-bottom {
+      padding-bottom: 30px;
+    }
+  }
+  &-lg {
+    padding: 45px !important;
+    &-left {
+      padding-left: 45px !important;
+    }
+    &-right {
+      padding-right: 45px !important;
+    }
+    &-top {
+      padding-top: 45px;
+    }
+    &-bottom {
+      padding-bottom: 45px !important;
+    }
+  }
+  &-xl {
+    padding: 70px !important;
+    &-left {
+      padding-left: 70px !important;
+    }
+    &-right {
+      padding-right: 70px !important;
+    }
+    &-top {
+      padding-top: 70px;
+    }
+    &-bottom {
+      padding-bottom: 70px !important;
+    }
+  }
+  &-md {
+    padding: 15px !important;
+    &-left {
+      padding-left: 15px !important;
+    }
+    &-right {
+      padding-right: 15px !important;
+    }
+    &-top {
+      padding-top: 15px !important;
+    }
+    &-bottom {
+      padding-bottom: 15px !important;
+    }
+  }
+
+  &-twenty {
+    &-five {
+      &-horizontal {
+        padding-left: 25px !important;
+        padding-right: 25px !important;
+      }
+    }
+  }
+
+  &-sm {
+    padding: 10px !important;
+    &-left {
+      padding-left: 10px !important;
+    }
+    &-right {
+      padding-right: 10px !important;
+    }
+    &-top {
+      padding-top: 10px !important;
+    }
+    &-bottom {
+      padding-bottom: 10px !important;
+    }
+  }
+
+  &-vs {
+    padding: 5px !important;
+    &-left {
+      padding-left: 5px !important;
+    }
+    &-right {
+      padding-right: 5px !important;
+    }
+    &-top {
+      padding-top: 5px !important;
+    }
+    &-bottom {
+      padding-bottom: 5px !important;
+    }
+  }
+  &-sides {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  &-twenty-five {
+    padding: 25px !important;
+    &-left {
+      padding-left: 25px !important;
+    }
+    &-right {
+      padding-right: 25px;
+    }
+    &-top {
+      padding-top: 25px;
+    }
+    &-bottom {
+      padding-bottom: 25px !important;
+    }
+  }
+  &-twenty {
+    padding: 20px !important;
+    &-left {
+      padding-left: 20px !important;
+    }
+    &-right {
+      padding-right: 20px !important;
+    }
+    &-top {
+      padding-top: 20px !important;
+    }
+    &-bottom {
+      padding-bottom: 20px !important;
+    }
+  }
+}
+
+// Text Classes
+
+.text {
+  &-hacker {
+    color: @grey;
+  }
+  &-justify {
+    text-align: justify;
+  }
+  &-right {
+    text-align: right;
+  }
+  &-left {
+    text-align: left;
+  }
+  &-color {
+    &-positive {
+      color: @brand!important;
+    }
+    &-yellow {
+      color: @yellow !important;
+    }
+    &-orange {
+      color: @orange !important;
+    }
+    &-lightpositive {
+      color: @lightbrand!important;
+    }
+    &-negative {
+      color: @brand-secondary!important;
+    }
+    &-white {
+      color: @white !important;
+    }
+    &-black {
+      color: @black !important;
+    }
+    &-lightblack {
+      color: @lightblack !important;
+    }
+    &-grey {
+      color: @grey !important;
+    }
+    &-blue {
+      color: @blue !important;
+    }
+    &-semilightgrey {
+      color: @semilightgrey !important;
+    }
+    &-darkgrey {
+      color: @darkgrey !important;
+    }
+    &-verysemilightgrey {
+      color: lighten(grey, 45%) !important;
+    }
+    &-green {
+      color: @green !important;
+    }
+    &-red {
+      color: @red !important;
+    }
+    &-yellow {
+      color: @yellow !important;
+    }
+    &-bullet-point {
+      color: @bulletPoint-color !important;
+    }
+  }
+  &-weight {
+    &-bold {
+      font-weight: 700 !important;
+    }
+    &-medium {
+      font-weight: 500 !important;
+    }
+    &-normal {
+      font-weight: 400 !important;
+    }
+    &-light {
+      font-weight: 300 !important;
+    }
+    &-medium-bold {
+      font-weight: 600 !important;
+    }
+  }
+  &-size {
+    &-normal {
+      font-size: 14px !important;
+    }
+    &-twentyfour {
+      font-size: 24px !important;
+    }
+    &-eighteen {
+      font-size: 18px !important;
+    }
+    &-sixteen {
+      font-size: 16px !important;
+    }
+    &-twelve {
+      font-size: 12px !important;
+    }
+    &-thirteen {
+      font-size: 13px !important;
+    }
+    &-fourteen {
+      font-size: 14px !important;
+    }
+    &-ten {
+      font-size: 10px !important;
+    }
+    &-small {
+      font-size: 0.8em !important;
+    }
+    &-average {
+      font-size: 0.9em !important;
+    }
+    &-normal {
+      font-size: 1.1em !important;
+    }
+    &-medium {
+      font-size: 1.2em !important;
+    }
+    &-large {
+      font-size: 1.5em !important;
+    }
+    &-big {
+      font-size: 2.5em !important;
+    }
+    &-bigger {
+      font-size: 3.5em !important;
+    }
+  }
+  &-decoration {
+    &-no {
+      text-decoration: none;
+      text-decoration-line: none;
+      text-decoration-style: none;
+      text-decoration-color: none;
+    }
+  }
+  &-center {
+    text-align: center !important;
+  }
+  &-left {
+    text-align: left !important;
+  }
+  &-right {
+    text-align: right !important;
+  }
+  &-justify {
+    text-align: justify !important;
+  }
+  &-uppercase {
+    text-transform: uppercase !important;
+  }
+  &-titlecase {
+    text-transform: capitalize !important;
+  }
+  &-align {
+    &-center {
+      text-align: center !important;
+    }
+  }
+}
+
+// Overflow Classes
+
+.overflow {
+  &-auto {
+    overflow: auto;
+  }
+  &-x-auto {
+    overflow-x: auto;
+  }
+  &-y-auto {
+    overflow-y: auto;
+  }
+}
+
+// Float Classes
+
+.float {
+  &-right {
+    float: right;
+  }
+  &-left {
+    float: left;
+  }
+}
+
+.clear {
+  &-both {
+    clear: both;
+  }
+}
+// Height Classes
+
+.height {
+  &-inherit {
+    height: inherit !important;
+  }
+  &-view-port {
+    height: 100vh !important;
+  }
+  &-full {
+    height: 100% !important;
+  }
+  &-thirty-five {
+    height: 35px !important;
+  }
+  &-sixty {
+    height: 60px !important;
+  }
+}
+
+// Width Classes
+
+.width {
+  &-view-port {
+    width: 100vw !important;
+  }
+  &-full {
+    width: 100% !important;
+  }
+}
+
+.box-shadow-none {
+  box-shadow: none !important;
+}
+
+// Border Classes
+
+.border {
+  &-no {
+    border: none !important;
+  }
+  &-top {
+    border-top: 1px solid @lightgrey !important;
+  }
+  &-bottom {
+    border-bottom: 1px solid @lightgrey !important;
+  }
+  &-right {
+    border-right: 1px solid @lightgrey;
+  }
+  &-left {
+    border-left: 1px solid @lightgrey;
+  }
+  &-none {
+    border: none !important;
+  }
+  &-radius {
+    &-none {
+      border-radius: 0 !important;
+    }
+    &-five {
+      border-radius: 5px !important;
+    }
+    &-top-left-five {
+      border-top-left-radius: 5px !important;
+    }
+    &-bottom-left-five {
+      border-bottom-left-radius: 5px !important;
+    }
+    &-top-right-five {
+      border-top-right-radius: 5px !important;
+    }
+    &-bottom-right-five {
+      border-bottom-right-radius: 5px !important;
+    }
+  }
+  &-right {
+    &-lighttundora {
+      border-right: 1px solid @lighttundora !important;
+    }
+  }
+}
+
+// Background Classes
+
+.bg {
+  &-transparent {
+    background-color: transparent !important;
+  }
+  &-mineshaft {
+    background-color: @dark !important;
+  }
+  &-tundora {
+    background-color: @tundora !important;
+  }
+  &-white {
+    background-color: white !important;
+  }
+  &-brand {
+    background-color: @brand !important;
+  }
+  &-negative {
+    background-color: @brand-secondary !important;
+  }
+  &-orange {
+    background-color: @bulletPoint-color !important;
+  }
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.animated-background {
+  animation-duration: 4s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-name: placeHolderShimmer;
+  background: @brand;
+  background: linear-gradient(to right, @brand 8%, darken(@brand, 50%) 18%, @brand 33%);
+  background-size: 700px 104px;
+  height: 6px;
+  border-radius: 5px;
+}
+
+@keyframes placeHolderShimmer {
+  0% {
+    background-position: -200px 0;
+  }
+  50% {
+    background-position: 200px 0;
+  }
+  100% {
+    background-position: -200px 0;
+  }
+}
+
+// Display Classes
+
+.display {
+  &-inline {
+    display: inline !important;
+    &-block {
+      display: inline-block !important;
+    }
+  }
+  &-none {
+    display: none !important;
+  }
+}
+
+// Position
+
+.position {
+  &-relative {
+    position: relative;
+  }
+}
+
+.ellipsis {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  display: block;
+}
+
+// Object fit
+
+.object-fit {
+  &-fill {
+    object-fit: fill;
+  }
+}
+
+// Overides
+.ui {
+  font-family: Roboto !important;
+}
+*:not(i) {
+  font-family: Roboto !important;
+}
+
+.animated-background {
+  animation-duration: 4s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-name: placeHolderShimmer;
+  background: white;
+  background: linear-gradient(to right, @white 8%, darken(@white, 50%) 18%, @white 33%);
+  background-size: 700px 104px;
+  height: 6px;
+  border-radius: 5px;
+}
+
+@keyframes placeHolderShimmer {
+  0% {
+    background-position: -200px 0;
+  }
+  50% {
+    background-position: 200px 0;
+  }
+  100% {
+    background-position: -200px 0;
+  }
+}
+
 .bottom-tab {
   position: absolute;
   bottom: 0;
@@ -7,45 +844,14 @@
   box-shadow: 0px 2px 16px 2px rgba(0, 0, 0, 0.36);
 }
 
-.bottom-tab-icon {
-  width: 18px;
-  height: 18px;
-}
-
-.text-center {
-  text-align: center;
-}
-
-.bottom-tab-item {
-  font-size: 10px;
-}
-
-.middle-aligned {
-  margin-top: calc(100vh - 59%);
-}
-
-.margin {
-  &-no {
-    margin: 0 !important;
+.bottom-tab {
+  &-icon {
+    width: 18px;
+    height: 18px;
   }
-}
-
-.shadow-button {
-  background-color: white;
-  border: none;
-  color: blue;
-  width: 278px !important;
-  border-radius: 5px;
-  padding-top: 30px !important;
-  padding-bottom: 30px !important;
-  font-size: 20px;
-  -webkit-box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.36);
-  -moz-box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.36);
-  box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.36);
-}
-
-.height-full {
-  height: 100%;
+  &-item {
+    font-size: 10px;
+  }
 }
 
 .bottom-tab {
