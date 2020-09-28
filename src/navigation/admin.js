@@ -5,6 +5,7 @@ import Category from "../screens/admin/stock/category";
 import Item from "../screens/admin/stock/item";
 import AppContainer from "../components/app-container";
 import AdminDashboard from "../screens/admin";
+import CreateCategory from "../screens/admin/stock/category/create";
 
 export const adminRouteConfig = [
   {
@@ -22,6 +23,10 @@ export const adminRouteConfig = [
   {
     path: "/admin/dashboard",
     component: AdminDashboard
+  },
+  {
+    path: "/admin/stock/category/create",
+    component: CreateCategory
   }
 ];
 
@@ -31,7 +36,7 @@ const AdminRoutes = () => {
       <Fragment>
         {adminRouteConfig.map((route) => (
           <Switch key={route.path}>
-            <Route path={route.path} component={route.component} />
+            <Route path={route.path} component={route.component} exact={true} />
           </Switch>
         ))}
       </Fragment>

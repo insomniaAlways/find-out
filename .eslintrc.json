@@ -22,6 +22,7 @@
     "quotes": ["warn", "double"],
     "semi": ["warn", "always"],
     "no-console": "warn",
-    "no-debugger": "warn"
+    "no-debugger": "warn",
+    "react/prop-types": "warn"
   }
 }
