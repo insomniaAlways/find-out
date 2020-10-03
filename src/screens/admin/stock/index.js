@@ -13,7 +13,7 @@ function StockHome(props) {
 
   return (
     <div className="ui two column centered center aligned grid margin-no height-full">
-      <div className="middle aligned column shadow-button" onClick={create}>
+      <div className="middle aligned column shadow-button cursor-pointer" onClick={create}>
         Add new Category
       </div>
     </div>

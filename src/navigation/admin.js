@@ -6,6 +6,7 @@ import Item from "../screens/admin/stock/item";
 import AppContainer from "../components/app-container";
 import AdminDashboard from "../screens/admin";
 import CreateCategory from "../screens/admin/stock/category/create";
+import EditItem from "../screens/admin/stock/item/edit";
 
 export const adminRouteConfig = [
   {
@@ -27,6 +28,10 @@ export const adminRouteConfig = [
   {
     path: "/admin/stock/category/create",
     component: CreateCategory
+  },
+  {
+    path: "/admin/stock/item/edit",
+    component: EditItem
   }
 ];
 
