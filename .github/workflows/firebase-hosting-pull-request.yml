@@ -38,7 +38,7 @@ jobs:
           npm i -g yarn
           yarn
       - name: "Run Build"
-        run: yarn build:prod
+        run: yarn build
       - name: "Deploy"
         uses: FirebaseExtended/action-hosting-deploy@v0
         with:
