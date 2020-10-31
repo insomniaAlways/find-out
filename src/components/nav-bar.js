@@ -8,9 +8,9 @@ function NavBar() {
           <img src="/images/logo.png" alt="" />
         </div>
         <div className="right menu">
-          <a className="item">Category</a>
-          <a className="item">Shops</a>
-          <a className="item">Sign-in</a>
+          <div className="item">Category</div>
+          <div className="item">Shops</div>
+          <div className="item">Sign-in</div>
         </div>
       </div>
     </>

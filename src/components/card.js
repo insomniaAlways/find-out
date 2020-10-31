@@ -10,7 +10,7 @@ function Card() {
       <div className="content">
         <div className="header">Matt Giampietro</div>
         <div className="meta">
-          <a>Friends</a>
+          <div>Friends</div>
         </div>
         <div className="description">Matthew is an interior designer living in New York.</div>
       </div>
