@@ -1,14 +1,15 @@
-import React from "react";
-import BottomTab from "./bottom-tab";
+import React, { Fragment } from "react";
 import PropTypes from "prop-types";
+import NavBar from "./nav-bar";
 
 function AppContainer(props) {
   const { children } = props;
+
   return (
-    <div className="app-container">
+    <Fragment>
+      <NavBar />
       {children}
-      <BottomTab />
-    </div>
+    </Fragment>
   );
 }
 

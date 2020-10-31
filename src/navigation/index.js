@@ -1,8 +1,8 @@
 import React from "react";
-import AdminRoutes from "./admin";
+import DefaultRoutes from "./default";
 
 const Navigation = () => {
-  return <AdminRoutes />;
+  return <DefaultRoutes />;
 };
 
 export default Navigation;
