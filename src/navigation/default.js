@@ -7,6 +7,10 @@ export const defaultRouteConfig = [
   {
     path: "/dashboard",
     component: Dashboard
+  },
+  {
+    path: "/",
+    component: Dashboard
   }
 ];
 
