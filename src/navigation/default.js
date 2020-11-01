@@ -19,7 +19,7 @@ export const defaultRouteConfig = [
     component: CategoryScreen
   },
   {
-    path: "/category_id/item",
+    path: "/:category_id/item",
     component: ItemScreen
   }
 ];

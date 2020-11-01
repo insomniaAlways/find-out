@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import CardGroup from "../components/card-groups";
 import Carousel from "../components/modules/carousel";
 
@@ -6,7 +6,7 @@ const categories = new Array(5).fill({ name: "category" });
 
 function Dashboard() {
   return (
-    <div className="ui segments" style={{ marginTop: 41 }}>
+    <Fragment>
       <div className="ui segment" style={{ height: "45vh" }}>
         <Carousel />
       </div>
@@ -26,7 +26,7 @@ function Dashboard() {
           </div>
         </div>
       </div>
-    </div>
+    </Fragment>
   );
 }
 

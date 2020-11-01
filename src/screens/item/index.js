@@ -1,17 +1,23 @@
-import React from "react";
-import CardGroup from "../../components/card-groups";
+import React, { Fragment } from "react";
+import ItemCard from "../../components/item-card";
 // import PropTypes from "prop-types";
 
-function ItemScreen() {
+const items = new Array(15).fill({ name: "item" });
+
+function ItemScreen(props) {
   return (
-    <div className="ui segments">
+    <Fragment>
       <div className="ui segment">
         <h3>Electronics</h3>
       </div>
       <div className="ui segment">
-        <CardGroup />
+        <div className="ui link five centered doubling cards">
+          {items.map((c, i) => (
+            <ItemCard key={i} data={{ ...c, id: i }} />
+          ))}
+        </div>
       </div>
-    </div>
+    </Fragment>
   );
 }
 
