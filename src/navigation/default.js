@@ -4,6 +4,7 @@ import AppContainer from "../components/app-container";
 import CategoryScreen from "../screens/category";
 import Dashboard from "../screens/dashboard";
 import ItemScreen from "../screens/item";
+import ShopScreen from "../screens/shop";
 
 export const defaultRouteConfig = [
   {
@@ -21,6 +22,10 @@ export const defaultRouteConfig = [
   {
     path: "/:category_id/item",
     component: ItemScreen
+  },
+  {
+    path: "/shop",
+    component: ShopScreen
   }
 ];
 

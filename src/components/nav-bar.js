@@ -10,9 +10,11 @@ function NavBar() {
         </Link>
         <div className="right menu">
           <Link to="/category" className="item">
-            <div className="text-center bottom-tab-item">Category</div>
+            <div className="text-center bottom-tab-item">Categories</div>
           </Link>
-          <div className="item">Shops</div>
+          <Link to="/shop" className="item">
+            <div className="text-center bottom-tab-item">Shops</div>
+          </Link>
           <div className="item">Sign-in</div>
         </div>
       </div>
