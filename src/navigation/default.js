@@ -1,6 +1,7 @@
 import React, { Fragment } from "react";
 import { Switch, Route } from "react-router-dom";
 import AppContainer from "../components/app-container";
+import Category from "../screens/category";
 import Dashboard from "../screens/dashboard";
 
 export const defaultRouteConfig = [
@@ -11,6 +12,10 @@ export const defaultRouteConfig = [
   {
     path: "/",
     component: Dashboard
+  },
+  {
+    path: "/category",
+    component: Category
   }
 ];
 

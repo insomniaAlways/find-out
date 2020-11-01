@@ -2,6 +2,7 @@ import React from "react";
 import AwesomeSlider from "react-awesome-slider";
 import withAutoplay from "react-awesome-slider/dist/autoplay";
 import "react-awesome-slider/dist/styles.css";
+import { Input } from "semantic-ui-react";
 import CardGroup from "../components/card-groups";
 
 const AutoplaySlider = withAutoplay(AwesomeSlider);
@@ -19,8 +20,7 @@ const Slider = () => (
     </div>
   </AutoplaySlider>
 );
-
-function Dashboard() {
+function Category() {
   return (
     <div className="ui segments" style={{ marginTop: 41 }}>
       <div className="ui segment" style={{ height: "45vh" }}>
@@ -29,15 +29,28 @@ function Dashboard() {
       <div className="ui segment">
         <div className="ui stackable centered grid margin-no">
           <div className="row">
-            <div className="fourteen wide center aligned column">
-              <h2>Grocery</h2>
-              <CardGroup />
+            <div className="fourteen wide column text-center">
+              <h2>All Categories</h2>
+            </div>
+          </div>
+          <div className="row">
+            <div className="three wide column">
+              <Input placeholder="Search..." className="width-full" icon="search" />
             </div>
           </div>
           <div className="row">
             <div className="fourteen wide center aligned column">
-              <h2>Fruits</h2>
-              <CardGroup />
+              <CardGroup isCategoryCard={true} />
+            </div>
+          </div>
+          <div className="row">
+            <div className="fourteen wide column text-center">
+              <h2>Recently Checked</h2>
+            </div>
+          </div>
+          <div className="row">
+            <div className="fourteen wide center aligned column">
+              <CardGroup isCategoryCard={true} />
             </div>
           </div>
         </div>
@@ -46,4 +59,4 @@ function Dashboard() {
   );
 }
 
-export default Dashboard;
+export default Category;
