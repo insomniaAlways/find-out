@@ -1,8 +1,9 @@
 import React, { Fragment } from "react";
 import { Switch, Route } from "react-router-dom";
 import AppContainer from "../components/app-container";
-import Category from "../screens/category";
+import CategoryScreen from "../screens/category";
 import Dashboard from "../screens/dashboard";
+import ItemScreen from "../screens/item";
 
 export const defaultRouteConfig = [
   {
@@ -15,7 +16,11 @@ export const defaultRouteConfig = [
   },
   {
     path: "/category",
-    component: Category
+    component: CategoryScreen
+  },
+  {
+    path: "/category_id/item",
+    component: ItemScreen
   }
 ];
 

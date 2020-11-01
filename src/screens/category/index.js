@@ -1,30 +1,15 @@
 import React from "react";
-import AwesomeSlider from "react-awesome-slider";
-import withAutoplay from "react-awesome-slider/dist/autoplay";
-import "react-awesome-slider/dist/styles.css";
 import { Input } from "semantic-ui-react";
-import CardGroup from "../components/card-groups";
+import CardGroup from "../../components/card-groups";
+import Carousel from "../../components/modules/carousel";
 
-const AutoplaySlider = withAutoplay(AwesomeSlider);
+const categories = new Array(5).fill({ name: "category" });
 
-const Slider = () => (
-  <AutoplaySlider play={true} cancelOnInteraction={true} interval={6000} fillParent={true}>
-    <div style={{ color: "white", background: "#b4b4ff" }}>
-      <h1>1</h1>
-    </div>
-    <div style={{ color: "black", background: "#ddf7dd" }}>
-      <h1>2</h1>
-    </div>
-    <div style={{ color: "black", background: "#ffffcc" }}>
-      <h1>3</h1>
-    </div>
-  </AutoplaySlider>
-);
-function Category() {
+function CategoryScreen() {
   return (
     <div className="ui segments" style={{ marginTop: 41 }}>
       <div className="ui segment" style={{ height: "45vh" }}>
-        <Slider />
+        <Carousel />
       </div>
       <div className="ui segment">
         <div className="ui stackable centered grid margin-no">
@@ -40,7 +25,7 @@ function Category() {
           </div>
           <div className="row">
             <div className="fourteen wide center aligned column">
-              <CardGroup isCategoryCard={true} />
+              <CardGroup isCategoryCard={true} cards={categories} />
             </div>
           </div>
           <div className="row">
@@ -50,7 +35,7 @@ function Category() {
           </div>
           <div className="row">
             <div className="fourteen wide center aligned column">
-              <CardGroup isCategoryCard={true} />
+              <CardGroup isCategoryCard={true} cards={categories} />
             </div>
           </div>
         </div>
@@ -59,4 +44,4 @@ function Category() {
   );
 }
 
-export default Category;
+export default CategoryScreen;

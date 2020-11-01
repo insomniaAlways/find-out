@@ -5,10 +5,11 @@ import PropTypes from "prop-types";
 function CardGroup(props) {
   return (
     <div className="ui link five centered doubling cards">
-      <Card isCategoryCard={props.isCategoryCard} />
-      <Card isCategoryCard={props.isCategoryCard} />
-      <Card isCategoryCard={props.isCategoryCard} />
-      <Card isCategoryCard={props.isCategoryCard} />
+      {props.cards &&
+        props.cards.length &&
+        props.cards.map((c, i) => (
+          <Card key={i} isCategoryCard={props.isCategoryCard} data={{ ...c, id: i }} />
+        ))}
     </div>
   );
 }
@@ -16,5 +17,6 @@ function CardGroup(props) {
 export default CardGroup;
 
 CardGroup.propTypes = {
-  isCategoryCard: PropTypes.bool
+  isCategoryCard: PropTypes.bool,
+  cards: PropTypes.array
 };
