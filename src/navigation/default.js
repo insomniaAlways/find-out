@@ -5,6 +5,7 @@ import CategoryScreen from "../screens/category";
 import Dashboard from "../screens/dashboard";
 import ItemScreen from "../screens/item";
 import ShopScreen from "../screens/shop";
+import ShopeDetails from "../screens/shop/details";
 
 export const defaultRouteConfig = [
   {
@@ -26,6 +27,10 @@ export const defaultRouteConfig = [
   {
     path: "/shop",
     component: ShopScreen
+  },
+  {
+    path: "/shop/:shop_id",
+    component: ShopeDetails
   }
 ];
 
