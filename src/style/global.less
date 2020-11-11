@@ -851,6 +851,7 @@ body {
   bottom: 0;
   left: 0;
   width: 100%;
+  z-index: 1;
   -webkit-box-shadow: 0px -1px 2px 0 rgba(34, 36, 38, 0.15);
   -moz-box-shadow: 0px -1px 2px 0 rgba(34, 36, 38, 0.15);
   box-shadow: 0px -1px 2px 0 rgba(34, 36, 38, 0.15);
@@ -900,5 +901,19 @@ body {
     border: none !important;
     border-bottom: 1px solid rgba(34, 36, 38, 0.15) !important;
     border-radius: 0 !important;
+  }
+}
+
+.mobile-menu {
+  display: none !important;
+}
+
+@media only screen and (max-width: 767px) {
+  .desktop-menu {
+    display: none !important;
+  }
+
+  .mobile-menu {
+    display: block !important;
   }
 }
