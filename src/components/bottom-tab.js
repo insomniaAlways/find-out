@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { Menu } from "semantic-ui-react";
 
 function BottomTab() {
-  const [activeItem, setActiveItem] = useState("");
+  const [ activeItem, setActiveItem ] = useState("");
 
   const handleItemClick = (e, { name }) => setActiveItem(name);
   return (
