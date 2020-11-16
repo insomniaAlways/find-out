@@ -1,10 +1,11 @@
 import React from "react";
 import Card from "./card";
 import PropTypes from "prop-types";
+import clsx from "clsx";
 
 function CardGroup(props) {
   return (
-    <div className="ui link five centered doubling cards">
+    <div className={clsx("ui link", props.size, "centered doubling cards", props.className)}>
       {props.cards &&
         props.cards.length &&
         props.cards.map((c, i) => (
@@ -18,5 +19,6 @@ export default CardGroup;
 
 CardGroup.propTypes = {
   isCategoryCard: PropTypes.bool,
-  cards: PropTypes.array
+  cards: PropTypes.array,
+  className: PropTypes.string
 };

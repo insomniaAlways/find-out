@@ -1,8 +1,12 @@
-import React from "react";
+import React, { Fragment } from "react";
 import DefaultRoutes from "./default";
 
 const Navigation = () => {
-  return <DefaultRoutes />;
+  return (
+    <Fragment>
+      <DefaultRoutes />
+    </Fragment>
+  );
 };
 
 export default Navigation;

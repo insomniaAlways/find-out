@@ -9,8 +9,8 @@ function Card(props) {
       <div className="image">
         <img src={faker.image.food()} alt="" />
       </div>
-      <div className="content">
-        <div className="header">Matt Giampietro</div>
+      <div className="content padding-vs">
+        <div className="description">Matt Giampietro</div>
       </div>
     </Link>
   );

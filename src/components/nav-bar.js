@@ -4,13 +4,13 @@ import { Menu } from "semantic-ui-react";
 import BottomTab from "./bottom-tab";
 
 function NavBar() {
-  const [ activeItem, setActiveItem ] = useState("");
+  const [activeItem, setActiveItem] = useState("");
 
   const handleItemClick = (e, { name }) => setActiveItem(name);
 
   return (
     <>
-      <Menu stackable className="desktop-menu">
+      <Menu stackable className="desktop-menu margin-no">
         <Menu.Item as="div">
           <Link to="/">H</Link>
         </Menu.Item>

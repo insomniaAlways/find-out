@@ -8,9 +8,7 @@ function AppContainer(props) {
   return (
     <Fragment>
       <NavBar />
-      <div className="ui segments" style={{ marginTop: 41 }}>
-        {children}
-      </div>
+      <div className="ui segments margin-no">{children}</div>
     </Fragment>
   );
 }

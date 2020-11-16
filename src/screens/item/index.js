@@ -11,7 +11,7 @@ function ItemScreen(props) {
         <h3>Electronics</h3>
       </div>
       <div className="ui segment">
-        <div className="ui link five centered doubling cards">
+        <div className="ui unstackable items">
           {items.map((c, i) => (
             <ItemCard key={i} data={{ ...c, id: i }} />
           ))}
