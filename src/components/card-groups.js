@@ -20,5 +20,6 @@ export default CardGroup;
 CardGroup.propTypes = {
   isCategoryCard: PropTypes.bool,
   cards: PropTypes.array,
-  className: PropTypes.string
+  className: PropTypes.string,
+  size: PropTypes.string
 };
