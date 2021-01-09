@@ -3,14 +3,14 @@ import { Link } from "react-router-dom";
 import { Menu } from "semantic-ui-react";
 
 function BottomTab() {
-  const [ activeItem, setActiveItem ] = useState("");
+  const [activeItem, setActiveItem] = useState("");
 
   const handleItemClick = (e, { name }) => setActiveItem(name);
   return (
     <div className="bottom-tab mobile-menu">
       <Menu>
         <Menu.Item as="div">
-          <Link to="/">H</Link>
+          <Link to="/">FO</Link>
         </Menu.Item>
         <Menu.Menu position="right">
           <Menu.Item

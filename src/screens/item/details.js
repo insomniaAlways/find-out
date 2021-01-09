@@ -10,7 +10,11 @@ function ItemDetails(props) {
     >
       <div className="ui segments padding-no margin-no">
         <div className="ui segment padding-no" style={{ width: "100%", height: "100%" }}>
-          <img src={faker.image.food()} alt="" style={{ width: "100%", height: "100%" }} />
+          <img
+            src={faker.image.food() + "?random=" + Date.now()}
+            alt=""
+            style={{ width: "100%", height: "100%" }}
+          />
         </div>
         <div className="ui segment padding-vs-vertical">
           <div className="text-size-medium text-weight-medium">Item Name</div>

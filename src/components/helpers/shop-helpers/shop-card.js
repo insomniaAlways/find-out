@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import faker from "faker";
-import { useHistory } from "react-router-dom";
+import { useHistory, Link } from "react-router-dom";
 
 function ShopCard(props) {
   const history = useHistory();
@@ -12,28 +12,25 @@ function ShopCard(props) {
     });
   };
   return (
-    <div className="item" onClick={onClick}>
-      <div className="ui segment">
-        <div className="ui grid margin-no">
-          <div className="row">
-            <div className="twelve wide column">
-              <div className="text-weight-medium text-size-sixteen">Shop {props.data.id}</div>
-              <div className="">grocery shop</div>
-            </div>
-            <div className="four wide middle aligned column text-center">
-              <img src={faker.image.abstract()} alt="" style={{ width: 60 }} />
-            </div>
-          </div>
-          <div className="row">
-            <div className="twelve wide column">
-              <div>Open: 09:00 AM - 8:00 PM</div>
-              <div>HSR Layout, Bangalore, 560068</div>
-            </div>
-            <div className="four wide middle aligned column text-center">30m</div>
-          </div>
+    <Link to={`/shop/${props.data.id}`} className="item">
+      <div className="image">
+        <img src={faker.image.fashion() + "?random=" + Date.now()} alt="" />
+      </div>
+      <div className="content">
+        <div className="header">Shop {props.data.id}</div>
+        <div className="meta">
+          <span>grocery shop</span>
+        </div>
+        <div className="description">
+          <p></p>
+        </div>
+        <div className="extra">
+          <p className="margin-bottom-five">Open: 09:00 AM - 8:00 PM</p>
+          <p className="margin-bottom-five">HSR Layout, Bangalore, 560068</p>
+          <p className="margin-bottom-five">30m</p>
         </div>
       </div>
-    </div>
+    </Link>
   );
 }
 

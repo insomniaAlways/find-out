@@ -7,7 +7,7 @@ function ItemCard(props) {
   return (
     <Link to={`item/${props.data.id}/details`} className="item">
       <div className="image">
-        <img src={faker.image.avatar()} alt="" />
+        <img src={faker.image.food() + "?random=" + Date.now()} alt="" />
       </div>
       <div className="content">
         <div className="header">Header</div>

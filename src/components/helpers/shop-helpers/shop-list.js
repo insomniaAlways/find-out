@@ -5,7 +5,7 @@ const shops = new Array(5).fill({ name: "shop" });
 
 function ShopList() {
   return (
-    <div className="ui items">
+    <div className="ui unstackable items">
       {shops.map((s, i) => (
         <ShopCard key={i} data={{ ...s, id: i }} />
       ))}
