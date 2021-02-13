@@ -1,10 +1,11 @@
 import React, { Fragment } from "react";
-import DefaultRoutes from "./default";
+// import DefaultRoutes from "./default";
+import EcoLifeDefaultRoutes from "./ecofile.navigations";
 
 const Navigation = () => {
   return (
     <Fragment>
-      <DefaultRoutes />
+      <EcoLifeDefaultRoutes />
     </Fragment>
   );
 };
