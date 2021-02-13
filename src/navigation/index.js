@@ -4,6 +4,7 @@ import DefaultRoutes from "./default";
 const Navigation = () => {
   return (
     <Fragment>
+      <div>Test</div>
       <DefaultRoutes />
     </Fragment>
   );
