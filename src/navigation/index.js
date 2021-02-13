@@ -7,6 +7,7 @@ const Navigation = () => {
       <div>Test</div>
       <h1>Hello</h1>
       <h5>Hi</h5>
+      <div>Solo test</div>
       <DefaultRoutes />
     </Fragment>
   );
