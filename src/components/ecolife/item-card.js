@@ -1,8 +1,8 @@
 import React from "react";
 import { Card, Icon, Image, Rating, Button} from "semantic-ui-react";
 
-const ItemCard = () => (
-  <Card style={{height:"34rem"}}>  
+const ItemCard = props => (
+  <Card style={props.style}>  
     <div style={{height:"2.5rem"}}></div>
     <Image
       src="/assets/images/10_50f0b4d8-c2f7-4c68-9165-d63d3186383e_grande.jpg"

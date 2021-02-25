@@ -21,7 +21,7 @@ function Home() {
       <div className="ui segment margin-top-no" style={{ height: "65vh" }}>
         <Carousel />
       </div>
-      <div className="ui container" style={{ marginTop:"7vh", width:'100rem'}}>
+      <div className="ui container" style={{ marginTop:"7vh", width:'fit-content'}}>
         <PromoContent />
         <div className="ui segments border-none box-shadow-none">
           <div className="ui segment" style={{ marginTop:"7vh" }}>
@@ -45,37 +45,38 @@ function Home() {
           
 
             
-                  <ItemCard />
+                  <ItemCard style={{height:'34rem'}}/>
                   <Badgecard imgsrc="/assets/images/10_50f0b4d8-c2f7-4c68-9165-d63d3186383e_grande.jpg"
                               meta="Vendor1"
                               title="Product Name"
 
                   />
-                  <ItemCard />
+                  <ItemCard style={{height:'34rem'}} />
                   <Badgecard  imgsrc="/assets/images/10_50f0b4d8-c2f7-4c68-9165-d63d3186383e_grande.jpg"
                               meta="Venor2"
                               title="Product Name2" />
                   
-                  <ItemCard />
-                  <ItemCard />
-                  <ItemCard />
-                  <ItemCard />
+                  <ItemCard style={{height:'34rem'}}/>
+                  <ItemCard style={{height:'34rem'}}/>
+                  <ItemCard style={{height:'34rem'}}/>
+                  <ItemCard style={{height:'34rem'}}/>
                   
 
               
               
               </ItemsCarousel>
             
-            
+            </div>
+              <div className="ui segment">
             
               <div className="text-size-large text-weight-medium" style={{ marginTop:"7vh" }}>Popular Categories</div>
                 <div className="text-color-grey margin-top-ten">
                   Add Popular Categories to weekly line up
                 </div>
                
-              </div>
               
-              <div className="ui segment">
+              
+              
               <ItemsCarousel
                 
                 requestToChangeActive={setActiveItemIndex_2}
@@ -146,21 +147,36 @@ function Home() {
              
               </ItemsCarousel>
               </div>
-
-              
-               
-              
-
-              <GridArrivals/>
+              <div className="ui segment">
+                <GridArrivals/>
+              </div>
+                <div className="ui segment" style={{ marginTop:"7vh" }}>
+              <div className="text-size-large text-weight-medium">New Arrivals</div>
+            <div className="text-color-grey margin-top-ten">
+              It has roots in a piece of classical
+            </div>
+          </div>
                 
+                </div>
+                
+               
+                
+                
+                
+                
+                
+            
+              
+      
                    
            
            
            
 
-        </div>  
+        
             
       </div>
+      
     </Fragment>
   );
 }
