@@ -10,6 +10,7 @@ const ItemCard = props => (
       ui={false}
      
     />
+    
     <Card.Content>
       
       <Card.Meta>
