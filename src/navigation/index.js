@@ -1,10 +1,10 @@
 import React, { Fragment } from "react";
-import LoginScreenRoutes from "./loginnavigation";
+import LoginRoutes from "./loginnavigation";
 
 const Navigation = () => {
   return (
     <Fragment>
-      <LoginScreenRoutes/>
+      <LoginRoutes/>
     </Fragment>
   );
 };

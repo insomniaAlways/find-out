@@ -1,13 +1,13 @@
 import React, { Fragment, createRef } from "react";
 import { Switch, Route } from "react-router-dom";
-import Login from "../screens/loginscreen";
+import login from "../screens/loginscreen";
 
-import NavBar from "../components/loginscreen/nav";
+import TopNav from "../components/loginscreen/nav";
 
 export const defaultRouteConfig = [
   {
     path: "/login",
-    component: Login
+    component: login
   }
 ];
 
@@ -18,7 +18,7 @@ const LoginscreenRoutes = () => {
     <Fragment>
       <div ref={ref}>
         
-        <NavBar contextRef={ref} />
+        <TopNav contextRef={ref} />
         {defaultRouteConfig.map((route) => (
           <Switch key={route.path}>
             <Route path={route.path} component={route.component} exact={true} />
